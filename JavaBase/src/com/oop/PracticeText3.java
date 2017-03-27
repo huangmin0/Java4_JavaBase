@@ -1,4 +1,4 @@
-package com.hm.javacore.datatype;
+package com.oop;
 
 import java.util.Scanner;
 

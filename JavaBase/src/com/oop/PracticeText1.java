@@ -1,4 +1,4 @@
-package com.hm.javacore.datatype;
+package com.oop;
 
 public class PracticeText1 {
 public static void main(String[] args){

@@ -1,4 +1,4 @@
-package com.hm.javacore.datatype;
+package com.adminis.name;
 
 public class TestAc {
 
