@@ -23,6 +23,6 @@ public abstract class Pet
 	}
 	public final void print()
 	{
-		System.out.println("name:" + name + ",age:" + ", love:" + love);
+		System.out.println("name:" + name + ",age:" + age+ ", love:" + love);
 	}
 }
