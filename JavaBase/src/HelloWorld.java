@@ -6,8 +6,14 @@ public class HelloWorld {
  */
 	// 输出信息到控制台
 	//这是单行注释
+
+	
+	
 	public static void main(String[] args) {
-  System.out.println("HelloWorld!!!");
+		int a=2;
+		int b=4;
+  System.out.println("a+b="+ (a+b));
 	}
 
+	
 }

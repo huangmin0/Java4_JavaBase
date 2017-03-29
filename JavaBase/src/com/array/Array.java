@@ -27,8 +27,21 @@ public class Array
 			sum+=score[i];
 		}
 			System.out.println("avg="+(sum/score.length));
-	
-		
+			
+			int max=0;
+			for(int i=0;i<score.length;i++){
+				if(score[i]>max){
+					max=score[i];
+				}
+			}
+			System.out.println("最大值:"+max);
+			int min=0;
+			for(int i=0;i<score.length;i++){
+				if (score[i]<min){
+					min=score[i];
+				}
+			}
+			System.out.println("最小值："+min);
 		
 		Arrays.sort(score);
 		System.out.println("升序后逐个循环输出：");

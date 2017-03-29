@@ -12,5 +12,6 @@ public class Master
 	{
 		pgn.eat();
 	}
-
+	
+	
 }
