@@ -9,7 +9,7 @@ public class Student implements Comparable<Student> {
 		super();
 		this.name = name;
 		this.age = age;
-		// System.out.println("Student 构造函数执行：" + name);
+
 	}
 
 	@Override
