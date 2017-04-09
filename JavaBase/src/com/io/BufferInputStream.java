@@ -1,4 +1,4 @@
-package com.file;
+package com.io;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,9 +15,9 @@ public class BufferInputStream
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		PrintStream out = System.out;
-		File pdfFile = new File("F://Github//Java4_JavaBase//JavaBase//03Pot.wmv");
-		File pdfFile2 = new File("F://Github//Java4_JavaBase//JavaBase//03PotBK.wmv");
-		File pdfFile3 = new File("F://Github//Java4_JavaBase//JavaBase//03PotBK2.wmv");
+		File pdfFile = new File("D://Github//Java4_JavaBase//JavaBase//03Pot.wmv");
+		File pdfFile2 = new File("D://Github//Java4_JavaBase//JavaBase//03PotBK.wmv");
+		File pdfFile3 = new File("D://Github//Java4_JavaBase//JavaBase//03PotBK2.wmv");
 		unUseBufferCopyFile(out, pdfFile, pdfFile2);
 
 	}
