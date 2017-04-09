@@ -21,7 +21,7 @@ public class BufferInputStream
 		unUseBufferCopyFile(out, pdfFile, pdfFile2);
 
 	}
-	private static void useBufferedCopyFile(PrintStream out, File pdfFile, File pdfFile3)
+/*	private static void useBufferedCopyFile(PrintStream out, File pdfFile, File pdfFile3)
 			throws FileNotFoundException, IOException {
 		FileInputStream fis = new FileInputStream(pdfFile);
 		FileOutputStream fos = new FileOutputStream(pdfFile3);
@@ -31,7 +31,7 @@ public class BufferInputStream
 		byte[] unit = new byte[8192];// 数组的大小为4KB,作为数据的传输单元
 		long start = System.currentTimeMillis();
 		out.println("使用缓冲器--现在的开始时间毫秒是：" + start + " ms");
-	/*	while (bis.available() > 0) {
+		while (bis.available() > 0) {
 			if (bis.available() >= 8192) {
 				bis.read(unit);
 				bos.write(unit);
@@ -41,7 +41,7 @@ public class BufferInputStream
 				bis.read(remain);
 				bos.write(remain);
 			}
-		}*/
+		}
 		//bos = bis.;
 		bis.close();
 		bos.flush();
@@ -51,7 +51,7 @@ public class BufferInputStream
 		out.println("现在的结束时间毫秒是：" + end + " ms");
 		long useTime = end - start;
 		out.println("使用缓冲器--文件拷贝完成，总共用时：" + useTime + " ms");
-	}
+	}*/
 	private static void unUseBufferCopyFile(PrintStream out, File pdfFile, File pdfFile2)
 			throws FileNotFoundException, IOException {
 		FileInputStream iStream = new FileInputStream(pdfFile);
