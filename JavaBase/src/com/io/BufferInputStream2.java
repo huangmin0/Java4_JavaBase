@@ -15,10 +15,9 @@ public class BufferInputStream2
 	public static void main(String[] args) throws IOException, InterruptedException 
 	{
 		PrintStream out=System.out;
-		File n1=new File("E://03Pot.wmv");
-		File n2=new File("E://o3PotBK.wmv");
-		unUseBefferCopyFile(out,n1,n2);
-		
+		File n1=new File("D:\\03Pot.wmv");
+		File n2=new File("D:\\03PotBK.wmv");
+		unUseBefferCopyFile(out, n1, n2);
 	}
 		private static void unUseBefferCopyFile(PrintStream out, File n1, File n2)throws IOException,InterruptedException {
 			FileInputStream fis=new FileInputStream(n1);
