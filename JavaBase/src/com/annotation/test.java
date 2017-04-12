@@ -13,7 +13,7 @@ public class test
 		Class c=new Person().getClass();
 		Object o=c.newInstance();
 		Field[] fi=c.getDeclaredFields();
-		
+	
 		for (Field field : fi)
 		{
 			if (field.isAnnotationPresent(Default.class)) {
