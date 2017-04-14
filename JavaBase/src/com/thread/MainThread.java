@@ -31,7 +31,8 @@ public class MainThread
 		myRunnable.setName("My Runnable");
 		myRunnable.setDaemon(true); //设置为后台运行
 		myRunnable.start();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);//休眠两秒
+		myRunnable.join();
 		System.out.println("修改为后台守护运行"+myRunnable.isDaemon());
 	}
 

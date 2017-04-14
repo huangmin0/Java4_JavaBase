@@ -29,6 +29,18 @@ public class DrawMoneyRunnanle implements Runnable
 			
 		}
 	}*/
+	
+/*	public synchronized void run() {
+	
+	System.out.println(Thread.currentThread().getName());
+	if (account.getBalance() >= drawAmount) { // 1
+		System.out.println("取钱成功， 取出钱数为：" + drawAmount);
+		double balance = account.getBalance() - drawAmount;
+		account.setBalance(balance);
+		System.out.println("余额为：" + balance);
+	}
+	
+}*/
 
 	public void run()
 	{
