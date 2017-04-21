@@ -1,16 +1,21 @@
 package com.oop;
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+
 public class Multiplication {
 
-	public static void main(String[] args) {
+	public  void show() throws FileNotFoundException {
+		PrintStream a=new PrintStream("D:\\Text.txt");
+		
 		for(int i=1;i<=9;i++){
 			for(int j=1;j<=9;j++){
 				if (j<=i){
-				 System.out.print(j+"*"+i+"="+i*j+" ");
+				 a.print(j+"*"+i+"="+i*j+" ");
 				}else 
-					 System.out.print(" ");
+					 a.print(" ");
 			}
-			System.out.println();
+			a.println();
 		}
 		
 		
