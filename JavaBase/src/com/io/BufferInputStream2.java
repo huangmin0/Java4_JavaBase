@@ -46,11 +46,5 @@ public class BufferInputStream2
 			System.out.println("现在结束的时间："+end+"ms");
 			long usetime=end-start;
 			System.out.println("copy总共使用的时间"+usetime+"ms");
-			
-
-		
-		
-		
-		
 	}
 }
