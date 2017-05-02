@@ -6,13 +6,13 @@ import javax.print.attribute.standard.PagesPerMinute;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 
-public class WriteArticleRunable implements Runnable
+public class WriteArticleRunnable implements Runnable
 {
 	private  Pen pen;
 	private Paper paper ;
 	private boolean isRunning=true;
 	private int count=20;//循环次数
-	public  WriteArticleRunable(Paper paper, Pen pen)
+	public  WriteArticleRunnable(Paper paper, Pen pen)
 	{
 		super();
 		this.pen=pen;
@@ -51,7 +51,7 @@ public class WriteArticleRunable implements Runnable
 			System.out.println("我检测为死锁，我让一下");
 			System.out.println("我释放资源，你们写");
 			paper.setIsprivate(false);
-			Thread.currentThread().setPriority(Thread.MIN_PRIORITY);//降低现成的优先级
+			Thread.currentThread().setPriority(Thread.MIN_PRIORITY);//降低线程的优先级
 			try {
 				Thread.sleep(1000);	//休眠中
 			} catch (InterruptedException e) {
