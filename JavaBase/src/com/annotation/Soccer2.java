@@ -5,21 +5,24 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Soccer2 extends Soccer1
-{
-	private int score=36;
-	@Soccer("beijing")
-private String address="shanghai";
-	@Deprecated
- public void showInfo()
+public class Soccer2 extends Soccer1 {
+	@Soccer("hxd")
+	private String name = "xhd";
+	@Soccer("33")
+	private int age = 23;
+	@Soccer("67.08")
+	private double weight = 70.55;
 
-{
-	System.out.println("["+score+","+address +"]"+super.toString()+getName()+getAge());
-}
-@Override
-public String toString()
-{
-	return "Soccer2 [score=" + score + ", address=" + address + "]";
-}
- 
+	@Deprecated
+	public void showInfo()
+
+	{
+		System.out.println("[" + name + "," + age +","+ weight + "]");
+	}
+
+	@Override
+	public String toString() {
+		return "Soccer2 [name=" + name + ", age=" + age + ", weight=" + weight + "]";
+	}
+
 }
