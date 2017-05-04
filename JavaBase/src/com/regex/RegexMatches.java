@@ -1,4 +1,4 @@
-package regex;
+package com.regex;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,8 +13,7 @@ public class RegexMatches {
 		Pattern r = Pattern.compile(pattern);
 		// 现在创建matcher对象
 		Matcher m = r.matcher(line);
-		int i = m.groupCount();
-		System.out.println("i=" + i);
+	
 		if (m.find()) {
 			System.out.println("Found value:" + m.group(0));
 			System.out.println("Found value:" + m.group(1));

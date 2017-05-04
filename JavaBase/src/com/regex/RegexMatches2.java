@@ -1,4 +1,4 @@
-package regex;
+package com.regex;
 
 import java.util.Currency;
 import java.util.regex.Matcher;
