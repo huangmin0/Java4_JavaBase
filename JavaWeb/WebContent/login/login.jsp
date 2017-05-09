@@ -9,7 +9,7 @@
 <body>
 	<form name="forml" method="post" action="login.jsp">
 		<span>用户名:</span> <input name="userName" type="text" size="12">
-		<br /> <span>密&nbsp;码:</span> <input name="passWord" type="password"
+		<br /> <span>密&nbsp;&nbsp;&nbsp;码:</span> <input name="passWord" type="password"
 			size="12"> <br /> <input type="submit" name="Submit"
 			value="提交"> <input type="reset" name="Submit" value="重置">
 		<%
