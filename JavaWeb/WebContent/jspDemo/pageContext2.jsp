@@ -11,9 +11,11 @@
 <%
 String userName=(String)pageContext.getAttribute("name");
 String userBirth=(String)pageContext.getAttribute("birthday");
+String userLocal=(String)application.getAttribute("location");
 %>
 <p>用户名：</p><%=userName %>
 <p>生日：</p><%=userBirth %>
+<p>地&nbsp;&nbsp;址：</p><%=userLocal %>
 <p>***********</p>
 </body>
 </html>
