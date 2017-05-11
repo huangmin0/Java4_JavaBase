@@ -19,7 +19,9 @@ request.protocal:${pageContext.request.protocol}<br/>
 request.remoteAddr:${pageContext.request.remoteAddr}<br/>
 request.remoteHost:${pageContext.request.remoteHost}<br/>
 request.remoteUser:${pageContext.request.remoteUser}<br/>
-<span>request.remotePort</span>${pageContext.request.remotePort }<br/>
+<span>request.remotePort:</span>${pageContext.request.remotePort }<br/>
+session.id:${pageContext.session.id }<br/>
+servletContext.serverInfo:${pageContext.servletContext.serverInfo }
 <hr/>
 
 </body>
