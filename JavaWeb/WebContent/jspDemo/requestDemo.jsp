@@ -9,7 +9,7 @@
 <body>
 <%
 String changeSessionId=request.changeSessionId();
-AsyncContext getAsyncContext=request.getAsyncContext();
+/* AsyncContext getAsyncContext=request.getAsyncContext(); */
 String AuthType=request.getAuthType();
 String CharacterEncoding=request.getCharacterEncoding();
 int contentlength = request.getContentLength();
@@ -19,7 +19,7 @@ String QueryString=request.getQueryString();
 %>
 <span>changeSessionId:</span><%=changeSessionId %>
 <br/>
-<span>getAsyncContext:</span><%=getAsyncContext %>
+<%-- <span>getAsyncContext:</span><%=getAsyncContext %> --%>
 <br/>
 <span>AuthType:</span><%=AuthType %>
 <br/>

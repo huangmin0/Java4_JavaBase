@@ -13,12 +13,13 @@
 			size="12"> <br /> <input type="submit" name="Submit"
 			value="提交"> <input type="reset" name="Submit" value="重置">
 		<%
-			String userName = request.getParameter("userName");
-			String passWord = request.getParameter("passWord");
+			String userName = request.getParameter("userName");//取得用户名信息 
+			String passWord = request.getParameter("passWord");//取得密码信息 
+			// 进行用户名和密码的验证
 			if (null != userName && null != passWord && "zhangsan".equals(userName) && "123456".equals(passWord))
 			{
-				response.setHeader("refresh", "3;url=loginCorrect.jsp ");
-				session.setAttribute("userid", userName);
+				response.setHeader("refresh", "3;url=loginCorrect.jsp ");//定时跳转 
+				session.setAttribute("userid", userName);//将用户登陆的信息保存在session中 
 		%>
 		<h1>登录成功，3秒后跳转到登录成功页面</h1>
 		<h3>

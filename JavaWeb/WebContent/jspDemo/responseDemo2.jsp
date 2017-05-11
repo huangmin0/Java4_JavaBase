@@ -8,17 +8,14 @@
 </head>
 <body>
 <%
-int count=0;
+Cookie c1=new Cookie("name","zhangsan");
+Cookie c2=new Cookie("age","25");
+c1.setMaxAge(3);
+c2.setMaxAge(3);
+response.addCookie(c1);
+response.addCookie(c2);
 %>
-<%
-response.setHeader("refresh","15");
-/* response.setHeader("refresh","3;url=http://www.baidu.com"); */
-%>
-<p>当前刷新次数:</p><%=count++ %>
-<%
-if(count==10){
-	response.sendRedirect("session2.jsp");
-}
-%>
+<a href="responseDemo21.jsp">链接</a>
+
 </body>
 </html>
