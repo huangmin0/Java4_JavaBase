@@ -20,5 +20,7 @@ String userAge=(String)request.getAttribute("age");
 <hr/>
 <!-- <a href="request2.jsp">跳转</a> -->
 <jsp:forward page="request2.jsp"></jsp:forward>
+<%-- ${pageContext.forward("request2.jsp") } --%>
+<%-- ${response.setHeader("refresh","1;request2.jsp") } --%>
 </body>
 </html>

@@ -18,7 +18,10 @@ String userAge=(String)session.getAttribute("age");
 <p>用户名:</p><%=userName %>
 <p>年龄:</p><%=userAge %>
 <hr/>
-<a href="session2.jsp">跳转</a>
-<%-- <jsp:forward page="session2.jsp"></jsp:forward> --%>
+<%-- <a href="session2.jsp">跳转</a>
+<jsp:forward page="session2.jsp"></jsp:forward> --%>
+ 
+ 
+ 
 </body>
 </html>
