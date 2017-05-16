@@ -32,12 +32,4 @@
     <servlet-name>HelloWorld</servlet-name>
     <url-pattern>/servlet/HelloWorld</url-pattern>
   </servlet-mapping>
-<!--   <servlet>
-  <servlet-name>ServletDemo</servlet-name>
-  <servlet-class>com.javaweb.servlet.ServletDemo</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>ServletDemo</servlet-name>
-  <url-pattern>/servlet/ServletDemo</url-pattern>
-  </servlet-mapping> -->
 </web-app>
