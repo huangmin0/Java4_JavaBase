@@ -36,7 +36,9 @@ public class MyLoginServletDemo extends HttpServlet {
 		out.println("<BODY>");
 		out.println("<h2>调用了doGet()方法</h2>");
 		out.println("<h2>用户输入信息如下：</h2>");
-		String username=request.getParameter("username");
+		//request.setCharacterEncoding("UTF-8");//解决请求中午乱码问题。要写在请求参数之前
+		String usename=request.getParameter("username");
+		String username=new String(usename.getBytes("iso8859_1"), "UTF-8");
 		if(username==null||username=="")
 			username="未输入";
 		String userpwd=request.getParameter("password");
@@ -61,7 +63,9 @@ public class MyLoginServletDemo extends HttpServlet {
 		out.println("<BODY>");
 		out.println("<h2>调用了doPost()方法</h2>");
 		out.println("<h2>用户输入信息如下：</h2>");
-		String username=request.getParameter("username");
+		//request.setCharacterEncoding("UTF-8");//解决请求中午乱码问题。要写在请求参数之前。此为方式一
+		String usename=request.getParameter("username");
+		String username=new String(usename.getBytes("iso8859_1"), "UTF-8");//new一个新的字符串，此为方式二。
 		if(username==null||username=="")
 			username="未输入";
 		String userpwd=request.getParameter("password");

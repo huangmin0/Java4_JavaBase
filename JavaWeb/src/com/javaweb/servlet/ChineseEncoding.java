@@ -27,7 +27,7 @@ public class ChineseEncoding extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out=response.getWriter();
 		out.println("<HTML>");
@@ -35,9 +35,10 @@ public class ChineseEncoding extends HttpServlet {
 		out.println("<body>");
 		out.println("<h3>调用了doGet()方法</h3><p>");
 		out.println("<font size=4>用户输入信息:</font>");
+		
 		String info=request.getParameter("information");
 		String newinfo=new String(info.getBytes("iso8859_1"),"UTF-8");
-		out.println("<h3>"+newinfo +"<h3>");
+		out.println("<h3>"+newinfo+"<h3>");
 		out.println("</body>");
 		out.println("</HTML>");
 		out.close();
@@ -47,8 +48,8 @@ public class ChineseEncoding extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html;charset=UTF-8");
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html;charset=UTF-8");//设置响应对象的字符集，解决页面中文乱码问题。
 		PrintWriter out=response.getWriter();
 		out.println("<HTML>");
 		out.println("<head><title>解决中文乱码问题</title></head>");
@@ -56,9 +57,10 @@ public class ChineseEncoding extends HttpServlet {
 		out.println("<h3>调用了doPost()方法</h3><p>");
 		out.println("<font size=4>用户输入信息:</font>");
 		
-		request.setCharacterEncoding("UTF-8");//设置请求对象的字符集
+		//request.setCharacterEncoding("UTF-8");//设置请求对象的字符集，解决请求参数的中文乱码问题，必须设置在参数前面。
 		String info=request.getParameter("information");
-		out.println("<h3>"+info +"<h3>");
+		String newinfo=new String(info.getBytes("iso8859_1"),"UTF-8");
+		out.println("<h3>"+newinfo +"<h3>");
 		out.println("</body>");
 		out.println("</HTML>");
 		out.close();

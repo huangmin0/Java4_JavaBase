@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>>/servlet/ChineseEncoding" method="get">
-<input name="information" type="text">
+<form action="<%=request.getContextPath()%>/servlet/ChineseEncoding" method="post">
+<input name="information" type="text"><br/>
 <input name="submit" type="submit">
 <input name="reset" type="reset">
-
-
-
 </form>
 </body>
 </html>
