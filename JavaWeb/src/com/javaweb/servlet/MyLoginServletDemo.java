@@ -36,9 +36,9 @@ public class MyLoginServletDemo extends HttpServlet {
 		out.println("<BODY>");
 		out.println("<h2>调用了doGet()方法</h2>");
 		out.println("<h2>用户输入信息如下：</h2>");
-		//request.setCharacterEncoding("UTF-8");//解决请求中午乱码问题。要写在请求参数之前
-		String usename=request.getParameter("username");
-		String username=new String(usename.getBytes("iso8859_1"), "UTF-8");
+		
+		String username=request.getParameter("username");
+		//String username=new String(usename.getBytes("iso8859_1"), "UTF-8");//在doGet()里面设置此方法会出现输入参数中文乱码，但是将iso8859_1换成UTF-8就不会出现乱码
 		if(username==null||username=="")
 			username="未输入";
 		String userpwd=request.getParameter("password");
