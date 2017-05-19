@@ -2,6 +2,8 @@ package com.javaweb.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +18,8 @@ import sun.print.resources.serviceui_zh_TW;
  */
 @WebServlet("/servlet/ThreadSafe")
 public class ThreadSafe extends HttpServlet {
-      // String name="";//实例变量，多线程共享
+      String name="";//实例变量，多线程共享
+      private final Lock lock = new ReentrantLock();
        private static final long serialVersionUID = 1L;
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,9 +39,10 @@ public class ThreadSafe extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>Servlet线程安全问题</title></head>");
 		out.println("<body>");
+		lock.lock();
 		String username=request.getParameter("name");
 		//String name=request.getParameter("name");
-		String name=new String(username.getBytes("UTF-8"), "UTF-8");
+		 name=new String(username.getBytes("UTF-8"), "UTF-8");
 		try {
 			Thread.sleep(10000);//休眠10秒
 		} catch (Exception e) {
@@ -48,6 +52,7 @@ public class ThreadSafe extends HttpServlet {
 		out.println("</body>");
 		out.println("</html>");
 		out.close();
+		lock.unlock();
 	}
 
 	/**

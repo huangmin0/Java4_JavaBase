@@ -29,7 +29,7 @@ public class MyLoginServletDemo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");//设置生成文档类型,解决乱码问题
-		//response.setContentType("UTF-8");//也可以解决乱码问题
+		//response.setCharacterEncoding("UTF-8");//也可以解决乱码问题
 		PrintWriter out=response.getWriter();
 		out.println("<HTML>");
 		out.println("<HEAD><TITLE>用servlet测试get/post方法</TITLE></HEAD");
