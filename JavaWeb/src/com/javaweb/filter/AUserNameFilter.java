@@ -21,12 +21,12 @@ import javax.servlet.http.HttpServletResponse;
 				DispatcherType.ERROR
 		}
 					, urlPatterns = { "/servlet/EnterDemo" })
-public class UserNameFilter2 implements Filter {
+public class AUserNameFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public UserNameFilter2() {
+    public AUserNameFilter() {
         // TODO Auto-generated constructor stub
     }
 
