@@ -14,26 +14,17 @@ import javax.servlet.annotation.WebInitParam;
 /**
  * Servlet Filter implementation class UserNameFilter
  */
-@WebFilter(
-		dispatcherTypes = {
-				DispatcherType.REQUEST, 
-				DispatcherType.FORWARD, 
-				DispatcherType.INCLUDE, 
-				DispatcherType.ERROR
-		}
-					, 
-		urlPatterns = { "/servlet/MyLoginServlet2" }, 
-		initParams = { 
-				@WebInitParam(name = "name", value = "zhangsan")
-		})
+@WebFilter(dispatcherTypes = { DispatcherType.REQUEST, DispatcherType.FORWARD, DispatcherType.INCLUDE,
+		DispatcherType.ERROR }, urlPatterns = {
+				"/servlet/MyLoginServlet2" }, initParams = { @WebInitParam(name = "name", value = "zhangsan") })
 public class UserNameFilter implements Filter {
 
-    /**
-     * Default constructor. 
-     */
-    public UserNameFilter() {
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * Default constructor.
+	 */
+	public UserNameFilter() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Filter#destroy()
@@ -45,15 +36,15 @@ public class UserNameFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
 		// pass the request along the filter chain
 		System.out.println("过滤器执行UserNameFilter");
 		chain.doFilter(request, response);
 		System.out.println("过滤器执行结束UserNameFilter");
-		
-		
+
 	}
 
 	/**
