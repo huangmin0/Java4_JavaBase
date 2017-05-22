@@ -9,29 +9,24 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet Filter implementation class UserNameFilter
+ * Servlet Filter implementation class NoCacheFilter
  */
-@WebFilter(
-		dispatcherTypes = {
+@WebFilter(dispatcherTypes = {
 				DispatcherType.REQUEST, 
 				DispatcherType.FORWARD, 
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-					, 
-		urlPatterns = { "/servlet/MyLoginServlet2" }, 
-		initParams = { 
-				@WebInitParam(name = "name", value = "zhangsan")
-		})
-public class UserNameFilter implements Filter {
+					, urlPatterns = { "/*" })
+public class NoCacheFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public UserNameFilter() {
+    public NoCacheFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -39,28 +34,27 @@ public class UserNameFilter implements Filter {
 	 * @see Filter#destroy()
 	 */
 	public void destroy() {
-		System.out.println("过滤器销毁被执行UserNameFilter");
+		// TODO Auto-generated method stub
 	}
 
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-		// pass the request along the filter chain
-		System.out.println("过滤器执行UserNameFilter");
+		System.out.println("禁止浏览器缓存过滤器正在执行....");
+		HttpServletResponse hsr=(HttpServletResponse)response;
+		hsr.setDateHeader("Expires", -1);
+		hsr.setHeader("Cache-Control", "no-cache");
+		hsr.setHeader("Pragma", "no-cache");
 		chain.doFilter(request, response);
-		System.out.println("过滤器执行结束UserNameFilter");
-		
-		
+		System.out.println("禁止浏览器缓存过滤器执行结.....");
 	}
 
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		System.out.println("过滤器初始化被执行UserNameFilter");
+		// TODO Auto-generated method stub
 	}
 
 }
