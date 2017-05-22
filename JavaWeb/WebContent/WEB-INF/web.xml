@@ -32,4 +32,10 @@
     <servlet-name>HelloWorld</servlet-name>
     <url-pattern>/servlet/HelloWorld</url-pattern>
   </servlet-mapping>
+  <listener>
+    <listener-class>com.javaweb.listener.SessionListener</listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
 </web-app>
