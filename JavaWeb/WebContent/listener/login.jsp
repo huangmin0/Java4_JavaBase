@@ -14,9 +14,9 @@
 </form>
 <%
 String userid=request.getParameter("userid");//接收用户名
-if(!(userid==null||"".equals(userid))){//登录名不能为空 
+if(!(userid==null || "".equals(userid))){//登录名不能为空 
 	session.setAttribute("userid", userid);//设置一个session属性 
-	response.sendRedirect("list.jsp");//跳转到list.jsp
+	response.sendRedirect("./list.jsp");//跳转到list.jsp
 }
 %>
 </body>
