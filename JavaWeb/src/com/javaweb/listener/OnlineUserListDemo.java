@@ -58,7 +58,7 @@ private ServletContext app=null;
     public void sessionDestroyed(HttpSessionEvent arg0)  { 
          Set all=(Set) app.getAttribute("online");
          if(all.size()>0){
-        	 all.remove(arg0.getSession().getServletContext());
+        	 all.remove(arg0.getSession().getAttribute("userid"));
         	 this.app.setAttribute("online", all);
          }
     }
@@ -94,6 +94,8 @@ private ServletContext app=null;
 			}
         	all.add(name);
         	this.app.setAttribute("online", all);
+        }else{
+        	System.out.println("增加属性并不是userid");
         }
     }
 
