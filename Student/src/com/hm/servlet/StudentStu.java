@@ -35,8 +35,6 @@ public class StudentStu extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		ServletContext servletContext = getServletContext();// 获得ServletContext
-		RequestDispatcher dispatcher = null;
 		String id = request.getParameter("id");// 接收学生学号
 		String name = request.getParameter("username");// 接收学生姓名
 		String age = request.getParameter("age");// 接收学生年龄

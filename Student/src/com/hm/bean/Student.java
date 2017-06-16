@@ -1,6 +1,5 @@
 package com.hm.bean;
 
-import org.apache.catalina.User;
 
 import lombok.Getter;
 import lombok.Setter;
